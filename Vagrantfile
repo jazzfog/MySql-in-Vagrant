@@ -9,6 +9,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.network "private_network", ip: "192.168.100.120"
   config.vm.network "forwarded_port", guest: 3306, host: 3306
+  config.vm.network "forwarded_port", guest: 22, host: 22
 
   # Run only once, when VM is being provisioned
   config.vm.provision "shell", path: "provision/provision.sh"
