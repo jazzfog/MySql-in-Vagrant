@@ -24,6 +24,8 @@ How to use
 6. Connect to it from your desktop using ip and port `192.168.100.120:3306` (you can change it in `Vagrantfile`). By default there is only user `root` with empty password.
 7. Log in into your VM with MySQL by running `vagrant ssh` in console from directory where project files are. Or you can use any `ssh` client you prefer and connect using ip and port `192.168.100.120:22`, in this case use login `vagrant` and password `vagrant` to access VM.
 8. Connect to MySQL server from VM by running `mysql -u root` in console (no need to use key `-p`)
+9. If you need to add some configuration to MySQL server - edit `provision/my.cnf` file.
+10. If you need to run something every time VM boots - edit  `provision/up.sh` file.
 
 Facts
 -----
@@ -31,6 +33,6 @@ Facts
 - This instance supposed to be development environment. The fact that root password is empty should state it :)
 - However it may give you some ideas how to provision production server automatically.
 - The data (MySQL binary files are located in directory `MysqlData` inside project folder). After each start MySQL in VM will pickup those files.
-- If you want to reset data - just delete directory `MysqlData`.
+- If you want to reset data - just delete directory `MysqlData`. Usually you do not need to re-create VM but you can do it too.
 - Guest OS/box is "[ubuntu/trusty64](https://atlas.hashicorp.com/ubuntu/boxes/trusty64)"
 - VM login and password are default for Vagrant: `vagrant`/`vagrant`.
