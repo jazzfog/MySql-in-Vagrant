@@ -23,7 +23,7 @@ How to use
 5. Just wait, in couple of minutes you will have fully functional MySQL server in virtual machine.
 6. Connect to it from your desktop using ip and port `192.168.100.120:3306` (you can change it in `Vagrantfile`). By default there is only user `root` with empty password.
 7. Log in into your VM with MySQL by running `vagrant ssh` in console from directory where project files are. Or you can use any `ssh` client you prefer and connect using ip and port `192.168.100.120:22`, in this case use login `vagrant` and password `vagrant` to access VM.
-8. Connect to MySQL server from VM by running `mysql -u root` in console
+8. Connect to MySQL server from VM by running `mysql -u root` in console (no need to use key `-p`)
 
 Facts
 -----
