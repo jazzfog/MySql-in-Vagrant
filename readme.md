@@ -22,7 +22,7 @@ How to use
 4. Open directory with files in console and execute `vagrant up`.
 5. Just wait, in couple of minutes you will have fully functional MySQL server in virtual machine.
 6. Connect to it from your desktop using ip and port `192.168.100.120:3306` (you can change it in `Vagrantfile`). By default there is only user `root` with empty password.
-7. Log in into your VM with MySQL by running `vagrant ssh` in console from directory where project files are. Or you can use any `ssh` client you prefer and connect using ip and port `192.168.100.120:22`
+7. Log in into your VM with MySQL by running `vagrant ssh` in console from directory where project files are. Or you can use any `ssh` client you prefer and connect using ip and port `192.168.100.120:22`, in this case use login `vagrant` and password `vagrant` to access VM.
 8. Connect to MySQL server from VM by running `mysql -u root` in console
 
 Facts
@@ -33,3 +33,4 @@ Facts
 - The data (MySQL binary files are located in directory `MysqlData` inside project folder). After each start MySQL in VM will pickup those files.
 - If you want to reset data - just delete directory `MysqlData`.
 - Guest OS/box is "[ubuntu/trusty64](https://atlas.hashicorp.com/ubuntu/boxes/trusty64)"
+- VM login and password are default for Vagrant: `vagrant`/`vagrant`.
